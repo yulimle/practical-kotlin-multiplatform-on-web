@@ -35,6 +35,10 @@ class IndexRouter : RouterFunction<ServerResponse> {
                 // TODO 다음 HTML 태그를 작성하세요
                 // <div id="root"></div>
                 // <script src="/main.js"></script>
+                div{
+                    id = "root"
+                }
+                script (src="/main.js"){  }
             }
         }
     }
