@@ -60,6 +60,7 @@ dependencyManagement {
 }
 
 kotlin {
+    // 지원하는 대상(플랫폼) 설정
     jvm {
         withJava()
         compilations.all {
@@ -103,6 +104,7 @@ kotlin {
             }
         }
     }
+    // 언어 설정 및 리소스 종속성 설정 가능
     sourceSets {
         val commonMain by getting {
             dependencies {

@@ -4,6 +4,10 @@ import kotlinx.browser.document
 import kotlinx.html.dom.create
 import kotlinx.html.h1
 import kotlinx.html.js.div
+import react.create
+import react.dom.client.createRoot
+import todoapp.ui.App
+import todoapp.ui.welcome.WelcomePage
 
 /**
  * 클라이언트 애플리케이션 진입점(entry point)
@@ -14,11 +18,14 @@ fun main() {
     val container = document.getElementById("root") ?: error("Couldn't find root container!")
 
 //    TODO("Client application entry point!")
-    container.appendChild(
-        document.create.div {
-            h1 {
-                + "Hello, Kotlin/JS!"
-            }
-        }
+//    container.appendChild(
+//        document.create.div {
+//            h1 {
+//                + "Hello, Kotlin/JS!"
+//            }
+//        }
+//    )
+    createRoot(container = container).render(
+        App.create()
     )
 }
